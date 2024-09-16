@@ -1,0 +1,23 @@
+{
+ "content": null,
+ "creation": "2023-08-19 15:22:58.906087",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2023-08-19 15:22:58.906087",
+ "modified_by": "Administrator",
+ "module": "KBL",
+ "name": "hr-policy",
+ "owner": "Administrator",
+ "page_name": "hr-policy",
+ "roles": [
+  {
+   "role": "Employee"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "HR Policy"
+}

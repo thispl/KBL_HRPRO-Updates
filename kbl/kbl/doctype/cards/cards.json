@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "creation": "2023-11-21 14:41:35.342721",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "cards",
+  "label"
+ ],
+ "fields": [
+  {
+   "fieldname": "cards",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Card Name",
+   "options": "Number Card"
+  },
+  {
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Label"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-11-21 14:43:33.717097",
+ "modified_by": "Administrator",
+ "module": "KBL",
+ "name": "Cards",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

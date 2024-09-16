@@ -1,0 +1,43 @@
+{
+ "actions": [],
+ "autoname": "field:religion",
+ "creation": "2021-09-25 10:30:50.024077",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "religion"
+ ],
+ "fields": [
+  {
+   "fieldname": "religion",
+   "fieldtype": "Data",
+   "label": "Religion",
+   "unique": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-09-25 10:31:05.857391",
+ "modified_by": "Administrator",
+ "module": "KBL",
+ "name": "Religion",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

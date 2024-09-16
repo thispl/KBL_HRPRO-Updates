@@ -1,0 +1,977 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:job_offer",
+ "creation": "2021-08-30 13:43:35.758485",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_details_section",
+  "job_applicant",
+  "user_id",
+  "job_offer",
+  "offer_type",
+  "first_name",
+  "father_husband",
+  "date_of_birth",
+  "age",
+  "place_of_birth",
+  "religion",
+  "nationality",
+  "marital_status",
+  "date_of_anniversary",
+  "column_break_11",
+  "date",
+  "physical_disability",
+  "height",
+  "blood_group",
+  "weight",
+  "gender",
+  "section_break_8",
+  "language",
+  "section_break_10",
+  "driving_licence",
+  "driving_license",
+  "place_of_issue",
+  "valid_up_to",
+  "column_break_25",
+  "passport_details",
+  "passport_number",
+  "place_issue",
+  "valid_to",
+  "section_break_20",
+  "uan",
+  "pan",
+  "column_break_33",
+  "aadhar",
+  "attachments_section",
+  "resume_attachment",
+  "sscl_marksheet",
+  "puc",
+  "graduation_marksheet",
+  "column_break_45",
+  "p_g",
+  "aadhar_id",
+  "pan_id",
+  "upload_your_signature",
+  "column_break_50",
+  "previous_appointment_letter",
+  "relieving_letter",
+  "permanent_address_proof",
+  "present_address_proof",
+  "column_break_55",
+  "voter_id",
+  "driving_license_attach",
+  "photo_attach",
+  "section_break_34",
+  "permanent_address",
+  "email",
+  "mobile_number",
+  "pin_3",
+  "column_break_24",
+  "present_address",
+  "email_2",
+  "mobile2",
+  "add_1",
+  "column_break_36",
+  "in_case_of_emergency",
+  "emergency_name",
+  "relationship_2",
+  "address",
+  "mobile_3",
+  "educational_details_section",
+  "head",
+  "education",
+  "pursuing_education",
+  "course",
+  "section_break_65",
+  "reference",
+  "data_27",
+  "special_skills_acquired",
+  "column_break_64",
+  "awards",
+  "section_break_67",
+  "employment_details_section",
+  "html_40",
+  "experience",
+  "section_break_68",
+  "training_programs_attended",
+  "column_break_41",
+  "promotion",
+  "section_break_44",
+  "html_44",
+  "family_details",
+  "form_11_section",
+  "new_company",
+  "old_company",
+  "from",
+  "to",
+  "account_number",
+  "column_break_90",
+  "family_pf_from",
+  "family_pf_to",
+  "gratuity_policy_section",
+  "primary_nominee",
+  "contingent_nominee",
+  "nominated_date",
+  "section_break_79",
+  "html_46",
+  "select_47",
+  "data_48",
+  "relationship",
+  "position",
+  "column_break_52",
+  "project",
+  "department_1",
+  "period_of_service",
+  "reason",
+  "section_break_89",
+  "declaration",
+  "i_agree",
+  "for_office_use_only_section",
+  "joining_details",
+  "present_designation",
+  "department",
+  "date_of_appointment",
+  "gross_salary",
+  "column_break_97",
+  "date_of_confirmation",
+  "remarks",
+  "others",
+  "section_break_104",
+  "offer_letter_download",
+  "signed_offer_letter",
+  "column_break_125",
+  "reporting_form",
+  "attach_109",
+  "column_break_106",
+  "nomination_form_template",
+  "signed_nomination_form",
+  "column_break_130",
+  "undertaking_form",
+  "attach_106",
+  "column_break_109",
+  "form_11_template",
+  "signed_form_11"
+ ],
+ "fields": [
+  {
+   "fieldname": "personal_details_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Details"
+  },
+  {
+   "fieldname": "father_husband",
+   "fieldtype": "Data",
+   "label": "Father's/ Husband's Name"
+  },
+  {
+   "fetch_from": "job_applicant.date_of_birth",
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "job_applicant.age",
+   "fieldname": "age",
+   "fieldtype": "Read Only",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fieldname": "place_of_birth",
+   "fieldtype": "Data",
+   "label": "Place of Birth"
+  },
+  {
+   "fieldname": "religion",
+   "fieldtype": "Data",
+   "label": "Religion"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Link",
+   "label": "Nationality",
+   "options": "Country",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Select",
+   "label": "Blood Group",
+   "options": "\nA+\nA-\nB+\nB-\nAB+\nAB-\nO+\nO-"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height(cm)"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight(kg)"
+  },
+  {
+   "fetch_from": "job_applicant.gender",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.marital_status==\"Married\"",
+   "fieldname": "date_of_anniversary",
+   "fieldtype": "Date",
+   "label": "Date of Anniversary"
+  },
+  {
+   "fetch_from": "employee_name.language_1",
+   "fieldname": "language",
+   "fieldtype": "Table",
+   "label": "Language",
+   "options": "Languages Known"
+  },
+  {
+   "fieldname": "physical_disability",
+   "fieldtype": "Small Text",
+   "label": "Physical Disability(if any)"
+  },
+  {
+   "fieldname": "present_address",
+   "fieldtype": "HTML",
+   "options": "Present Address"
+  },
+  {
+   "fieldname": "permanent_address",
+   "fieldtype": "HTML",
+   "options": "Permanent Address"
+  },
+  {
+   "fieldname": "in_case_of_emergency",
+   "fieldtype": "HTML",
+   "options": "In case of Emergency Whom to contact"
+  },
+  {
+   "fieldname": "educational_details_section",
+   "fieldtype": "Section Break",
+   "label": "Educational Details"
+  },
+  {
+   "fieldname": "head",
+   "fieldtype": "HTML",
+   "label": "Education Head",
+   "options": "<b>Educational Qualifications</b>"
+  },
+  {
+   "fieldname": "education",
+   "fieldtype": "Table",
+   "options": "Employee Education",
+   "reqd": 1
+  },
+  {
+   "fieldname": "data_27",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "special_skills_acquired",
+   "fieldtype": "Small Text",
+   "label": "Special Skills Acquired "
+  },
+  {
+   "fieldname": "awards",
+   "fieldtype": "Small Text",
+   "label": "Awards & Achievement "
+  },
+  {
+   "fieldname": "pursuing_education",
+   "fieldtype": "HTML",
+   "options": "Pursuing Education( if any )"
+  },
+  {
+   "fieldname": "course",
+   "fieldtype": "Table",
+   "options": "Pursuing Education"
+  },
+  {
+   "fieldname": "employment_details_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "html_40",
+   "fieldtype": "HTML",
+   "options": "<b> Previous Employment Details</b>"
+  },
+  {
+   "fieldname": "column_break_41",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "training_programs_attended",
+   "fieldtype": "Small Text",
+   "label": "Training programs attended, if any"
+  },
+  {
+   "fieldname": "promotion",
+   "fieldtype": "Small Text",
+   "label": "Promotion , if any "
+  },
+  {
+   "fieldname": "html_44",
+   "fieldtype": "HTML",
+   "options": "<b> Please furnish your Family details</b>"
+  },
+  {
+   "fieldname": "section_break_44",
+   "fieldtype": "Section Break",
+   "label": "Family Details"
+  },
+  {
+   "fieldname": "html_46",
+   "fieldtype": "HTML",
+   "options": "Are you related to any present or ex-employee of KBL or were previously employed by KBL"
+  },
+  {
+   "fieldname": "select_47",
+   "fieldtype": "Select",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.select_47==\"Yes\"",
+   "fieldname": "data_48",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "depends_on": "eval:doc.select_47==\"Yes\"",
+   "fieldname": "relationship",
+   "fieldtype": "Data",
+   "label": "Relationship"
+  },
+  {
+   "depends_on": "eval:doc.select_47==\"Yes\"",
+   "fieldname": "position",
+   "fieldtype": "Data",
+   "label": "Position"
+  },
+  {
+   "depends_on": "eval:doc.select_47==\"Yes\"",
+   "fieldname": "project",
+   "fieldtype": "Data",
+   "label": "Project & Location"
+  },
+  {
+   "depends_on": "eval:doc.select_47==\"Yes\"",
+   "fieldname": "department_1",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "depends_on": "eval:doc.select_47==\"Yes\"",
+   "fieldname": "period_of_service",
+   "fieldtype": "Data",
+   "label": "Period of Service"
+  },
+  {
+   "fieldname": "column_break_52",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.select_47==\"Yes\"",
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason for Relieving"
+  },
+  {
+   "fieldname": "declaration",
+   "fieldtype": "HTML",
+   "label": "Declaration",
+   "options": "<b>Declaration :</b> I certify that the statements made by me are true, complete and correct. I agree that in case the Company, at any time, finds that the information furnished by me as above is not true, the Company shall have the right to terminate my employment without any notice at any time"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "ID Proof Details"
+  },
+  {
+   "fetch_from": "employee_name.email_id",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee_name.email_id",
+   "fieldname": "email_2",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "relationship_2",
+   "fieldtype": "Data",
+   "label": "Relationship",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "pin_3",
+   "fieldtype": "Small Text",
+   "label": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile_3",
+   "fieldtype": "Data",
+   "label": "Mobile",
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_36",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_68",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "passport_details",
+   "fieldtype": "Heading",
+   "label": "Passport Details"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_64",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Table",
+   "label": "Reference",
+   "options": "Reference"
+  },
+  {
+   "collapsible": 1,
+   "description": "Reference (Furnish particulars of two persons not related to you from whom we can seek reference)",
+   "fieldname": "section_break_67",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_89",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_79",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:frappe.user.has_role('HR User')",
+   "fieldname": "for_office_use_only_section",
+   "fieldtype": "Section Break",
+   "label": "For Office Use only"
+  },
+  {
+   "fieldname": "joining_details",
+   "fieldtype": "Heading",
+   "label": "Joining Details"
+  },
+  {
+   "fetch_from": "job_offer.designation",
+   "fieldname": "present_designation",
+   "fieldtype": "Link",
+   "label": "Present Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "date_of_appointment",
+   "fieldtype": "Date",
+   "label": "Date of Appointment "
+  },
+  {
+   "fieldname": "date_of_confirmation",
+   "fieldtype": "Date",
+   "label": "Date of Confirmation"
+  },
+  {
+   "fieldname": "gross_salary",
+   "fieldtype": "Currency",
+   "label": "Gross Salary",
+   "read_only": 1
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Small Text",
+   "label": "Others"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_97",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "driving_licence",
+   "fieldtype": "Heading",
+   "label": "Driving License Details",
+   "options": "Driving License"
+  },
+  {
+   "fieldname": "family_details",
+   "fieldtype": "Table",
+   "options": "Family Details"
+  },
+  {
+   "fieldname": "experience",
+   "fieldtype": "Table",
+   "options": "Employee External Work History"
+  },
+  {
+   "fieldname": "driving_license",
+   "fieldtype": "Data",
+   "label": "Driving license "
+  },
+  {
+   "fieldname": "place_of_issue",
+   "fieldtype": "Data",
+   "label": "Place of Issue"
+  },
+  {
+   "fieldname": "valid_up_to",
+   "fieldtype": "Date",
+   "label": "Valid Upto"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "passport_number",
+   "fieldtype": "Data",
+   "label": "Passport Number"
+  },
+  {
+   "fieldname": "place_issue",
+   "fieldtype": "Data",
+   "label": "Place of Issue"
+  },
+  {
+   "fieldname": "valid_to",
+   "fieldtype": "Date",
+   "label": "Valid Upto"
+  },
+  {
+   "fieldname": "uan",
+   "fieldtype": "Data",
+   "label": "UAN"
+  },
+  {
+   "fieldname": "pan",
+   "fieldtype": "Data",
+   "label": "PAN"
+  },
+  {
+   "fieldname": "aadhar",
+   "fieldtype": "Data",
+   "label": "Aadhar",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "section_break_34",
+   "fieldtype": "Section Break",
+   "label": "Address Details"
+  },
+  {
+   "fieldname": "column_break_33",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:!doc.__islocal\n",
+   "description": "Click on the below button to DOWNLOAD the filled\ndocument. Take a print of the same, sign it, scan it and upload using the attach button below.",
+   "fieldname": "section_break_104",
+   "fieldtype": "Section Break",
+   "label": "Mandatory Attachments"
+  },
+  {
+   "fieldname": "undertaking_form",
+   "fieldtype": "Button",
+   "label": "Undertaking Form "
+  },
+  {
+   "fieldname": "column_break_106",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reporting_form",
+   "fieldtype": "Button",
+   "label": "Reporting Form "
+  },
+  {
+   "fieldname": "attach_106",
+   "fieldtype": "Attach",
+   "label": "Undertaking Form"
+  },
+  {
+   "fieldname": "attach_109",
+   "fieldtype": "Attach",
+   "label": "Reporting Form"
+  },
+  {
+   "fetch_from": "job_applicant.marital_status",
+   "fieldname": "marital_status",
+   "fieldtype": "Read Only",
+   "label": "Marital Status"
+  },
+  {
+   "fieldname": "emergency_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile",
+   "length": 10,
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "job_applicant.phone_number",
+   "fieldname": "mobile2",
+   "fieldtype": "Data",
+   "label": "Mobile",
+   "length": 10,
+   "options": "Phone"
+  },
+  {
+   "fetch_from": "job_applicant.applicant_name",
+   "fieldname": "first_name",
+   "fieldtype": "Read Only",
+   "label": "First Name"
+  },
+  {
+   "fieldname": "section_break_65",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "job_applicant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Job Applicant",
+   "options": "Job Applicant",
+   "unique": 1
+  },
+  {
+   "fieldname": "offer_letter_download",
+   "fieldtype": "Button",
+   "label": "Offer Letter "
+  },
+  {
+   "fieldname": "signed_offer_letter",
+   "fieldtype": "Attach",
+   "label": "Offer Letter"
+  },
+  {
+   "fieldname": "column_break_109",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "job_offer",
+   "fieldtype": "Link",
+   "label": "Job Offer",
+   "options": "Job Offer",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "i_agree",
+   "fieldtype": "Check",
+   "label": "I Agree",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "job_offer.offer_type",
+   "fieldname": "offer_type",
+   "fieldtype": "Data",
+   "label": "Offer Type"
+  },
+  {
+   "fieldname": "form_11_template",
+   "fieldtype": "Attach",
+   "label": "Form 11 "
+  },
+  {
+   "fieldname": "signed_form_11",
+   "fieldtype": "Attach",
+   "label": "Form 11"
+  },
+  {
+   "fieldname": "nomination_form_template",
+   "fieldtype": "Button",
+   "label": "Nomination Form "
+  },
+  {
+   "fieldname": "signed_nomination_form",
+   "fieldtype": "Attach",
+   "label": "Nomination Form"
+  },
+  {
+   "fieldname": "form_11_section",
+   "fieldtype": "Section Break",
+   "label": "Form - 11 : PF Nomination Form"
+  },
+  {
+   "fieldname": "new_company",
+   "fieldtype": "Link",
+   "label": "Company Name",
+   "options": "Company"
+  },
+  {
+   "fieldname": "old_company",
+   "fieldtype": "Data",
+   "label": "Previous  Company"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Date",
+   "label": "From"
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Date",
+   "label": "To"
+  },
+  {
+   "fieldname": "account_number",
+   "fieldtype": "Data",
+   "label": "PF Account Number"
+  },
+  {
+   "fieldname": "column_break_90",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "family_pf_from",
+   "fieldtype": "Date",
+   "label": "Family PF From"
+  },
+  {
+   "fieldname": "family_pf_to",
+   "fieldtype": "Date",
+   "label": "Family PF To"
+  },
+  {
+   "fieldname": "gratuity_policy_section",
+   "fieldtype": "Section Break",
+   "label": "Gratuity Policy"
+  },
+  {
+   "fieldname": "primary_nominee",
+   "fieldtype": "Table",
+   "label": "Primary Nominee",
+   "options": "Primary Nominee"
+  },
+  {
+   "fieldname": "contingent_nominee",
+   "fieldtype": "Table",
+   "label": "Contingent Nominee",
+   "options": "Contingent Nominee"
+  },
+  {
+   "fieldname": "nominated_date",
+   "fieldtype": "Data",
+   "label": "Nominated date"
+  },
+  {
+   "fieldname": "column_break_130",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_125",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fetch_from": "job_applicant.image",
+   "fieldname": "photo_attach",
+   "fieldtype": "Attach Image",
+   "label": "Photo Attach"
+  },
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "label": "User ID",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "job_applicant.resume_attachment",
+   "fieldname": "resume_attachment",
+   "fieldtype": "Attach",
+   "label": "Resume Attachment"
+  },
+  {
+   "fetch_from": "job_applicant.sslc_mark_sheets",
+   "fieldname": "sscl_marksheet",
+   "fieldtype": "Attach",
+   "label": "SSCL Marksheet"
+  },
+  {
+   "fetch_from": "job_applicant.puc_",
+   "fieldname": "puc",
+   "fieldtype": "Attach",
+   "label": "Puc"
+  },
+  {
+   "fetch_from": "job_applicant.graduation_",
+   "fieldname": "graduation_marksheet",
+   "fieldtype": "Attach",
+   "label": "Graduation Marksheet"
+  },
+  {
+   "fieldname": "column_break_45",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "job_applicant.p_g_",
+   "fieldname": "p_g",
+   "fieldtype": "Attach",
+   "label": "P G"
+  },
+  {
+   "fetch_from": "job_applicant.aadhar_id",
+   "fieldname": "aadhar_id",
+   "fieldtype": "Attach",
+   "label": "Aadhar ID"
+  },
+  {
+   "fetch_from": "job_applicant.pan",
+   "fieldname": "pan_id",
+   "fieldtype": "Attach",
+   "label": "PAN "
+  },
+  {
+   "fetch_from": "job_applicant.upload_your_signature",
+   "fieldname": "upload_your_signature",
+   "fieldtype": "Attach",
+   "label": "Upload Your Signature"
+  },
+  {
+   "fieldname": "column_break_50",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "job_applicant.appointment_letter",
+   "fieldname": "previous_appointment_letter",
+   "fieldtype": "Attach",
+   "label": "Previous Appointment Letter"
+  },
+  {
+   "fetch_from": "job_applicant.reliving_letter",
+   "fieldname": "relieving_letter",
+   "fieldtype": "Attach",
+   "label": "Relieving Letter"
+  },
+  {
+   "fetch_from": "job_applicant.permanent",
+   "fieldname": "permanent_address_proof",
+   "fieldtype": "Attach",
+   "label": "Permanent Address Proof"
+  },
+  {
+   "fetch_from": "job_applicant.present_proof",
+   "fieldname": "present_address_proof",
+   "fieldtype": "Attach",
+   "label": "Present Address Proof"
+  },
+  {
+   "fieldname": "column_break_55",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "job_applicant.voter_id",
+   "fieldname": "voter_id",
+   "fieldtype": "Attach",
+   "label": "Voter ID"
+  },
+  {
+   "fetch_from": "job_applicant.driving_license_",
+   "fieldname": "driving_license_attach",
+   "fieldtype": "Attach",
+   "label": "Driving License "
+  },
+  {
+   "fieldname": "add_1",
+   "fieldtype": "Small Text",
+   "label": "Address "
+  }
+ ],
+ "image_field": "photo_attach",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-07 14:54:45.940671",
+ "modified_by": "Administrator",
+ "module": "KBL",
+ "name": "Joining Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

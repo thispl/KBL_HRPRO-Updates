@@ -1,0 +1,139 @@
+{
+ "actions": [],
+ "autoname": "field:employee_name",
+ "creation": "2021-09-29 12:13:13.947166",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "id_card_details_section",
+  "employee_number",
+  "employee_name",
+  "photo",
+  "column_break_3",
+  "emergency_contact",
+  "designation",
+  "for_office_use_only_section",
+  "employee_code",
+  "date_of_joining",
+  "date_of_issue",
+  "column_break_11",
+  "location",
+  "verified_by",
+  "approved_by"
+ ],
+ "fields": [
+  {
+   "fetch_from": "employee_number.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "options": "Name",
+   "unique": 1
+  },
+  {
+   "fetch_from": "employee_number.emergency_phone_number",
+   "fieldname": "emergency_contact",
+   "fieldtype": "Data",
+   "label": "Emergency Contact",
+   "length": 10,
+   "options": "Phone"
+  },
+  {
+   "fetch_from": "employee_number.designation",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "employee_number",
+   "fieldtype": "Link",
+   "label": "Employee code",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee_number.photo_attachment_",
+   "fieldname": "photo",
+   "fieldtype": "Attach",
+   "label": "Photo"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "for_office_use_only_section",
+   "fieldtype": "Section Break",
+   "label": "For Office use only"
+  },
+  {
+   "fetch_from": "employee_number.employee_number",
+   "fieldname": "employee_code",
+   "fieldtype": "Data",
+   "label": "Employee code"
+  },
+  {
+   "fetch_from": "employee_number.date_of_joining",
+   "fieldname": "date_of_joining",
+   "fieldtype": "Data",
+   "label": "Date of Joining"
+  },
+  {
+   "fieldname": "date_of_issue",
+   "fieldtype": "Date",
+   "label": "Date of Issue"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "verified_by",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Verified By"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Approved By"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "id_card_details_section",
+   "fieldtype": "Section Break",
+   "label": "ID Card Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-09-29 13:25:36.129934",
+ "modified_by": "Administrator",
+ "module": "KBL",
+ "name": "ID Card Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

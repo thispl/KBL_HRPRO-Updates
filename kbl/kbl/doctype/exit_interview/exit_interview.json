@@ -1,0 +1,310 @@
+{
+ "actions": [],
+ "autoname": "EI.#####",
+ "creation": "2024-05-14 11:43:42.245578",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "designation",
+  "data_4",
+  "location",
+  "relieving_date",
+  "interview_date",
+  "data_8",
+  "reason",
+  "data_9",
+  "job_satisfaction_section",
+  "data_10",
+  "data_11",
+  "3_work_environment_section",
+  "data_12",
+  "data_13",
+  "4_management_and_leadership_section",
+  "data_14",
+  "data_15",
+  "5_training_and_development_section",
+  "data_16",
+  "data_17",
+  "data_18",
+  "6_feedback_and_recognition_section",
+  "data_19",
+  "data_20",
+  "data_21",
+  "data_22",
+  "data_23",
+  "data_24",
+  "data_25",
+  "data_26",
+  "section_brk",
+  "data_27",
+  "data_28",
+  "data_29",
+  "data_30",
+  "data_31",
+  "data_32",
+  "data_33",
+  "data_34",
+  "section_break_42",
+  "data_35",
+  "data_36"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "fieldname": "data_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "data_8",
+   "fieldtype": "Section Break",
+   "label": "1.Reason for Leaving:"
+  },
+  {
+   "fieldname": "data_9",
+   "fieldtype": "Small Text",
+   "label": "Q:What are the specific factors influenced your decision to resign?"
+  },
+  {
+   "fetch_from": "employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Location"
+  },
+  {
+   "fetch_from": "employee.relieving_date",
+   "fieldname": "relieving_date",
+   "fieldtype": "Data",
+   "label": "Date of Relieving"
+  },
+  {
+   "default": "Today",
+   "fieldname": "interview_date",
+   "fieldtype": "Date",
+   "label": "Exit Interview Date"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Q:What Prompted Your decision to leave the company?"
+  },
+  {
+   "fieldname": "job_satisfaction_section",
+   "fieldtype": "Section Break",
+   "label": "2.Job Satisfaction:"
+  },
+  {
+   "fieldname": "data_10",
+   "fieldtype": "Small Text",
+   "label": "Q:What aspects of your job did you find most satisfying?"
+  },
+  {
+   "fieldname": "data_11",
+   "fieldtype": "Small Text",
+   "label": " Q:Were there any aspects of your role that you found particularly challenging or frustrating?"
+  },
+  {
+   "fieldname": "3_work_environment_section",
+   "fieldtype": "Section Break",
+   "label": "3. Work Environment"
+  },
+  {
+   "fieldname": "data_12",
+   "fieldtype": "Small Text",
+   "label": "Q: How would you describe the work culture and environment within the company?"
+  },
+  {
+   "fieldname": "data_13",
+   "fieldtype": "Small Text",
+   "label": "Q: Did you feel that your contributions were recognized and appreciated?"
+  },
+  {
+   "fieldname": "4_management_and_leadership_section",
+   "fieldtype": "Section Break",
+   "label": "4. Management and Leadership"
+  },
+  {
+   "fieldname": "data_14",
+   "fieldtype": "Small Text",
+   "label": "Q: How would you rate the effectiveness of your immediate supervisor/manager?"
+  },
+  {
+   "fieldname": "data_15",
+   "fieldtype": "Small Text",
+   "label": "Q: Were there specific leadership practices or behaviors that stood out to you?"
+  },
+  {
+   "fieldname": "5_training_and_development_section",
+   "fieldtype": "Section Break",
+   "label": "5. Training and Development"
+  },
+  {
+   "fieldname": "data_16",
+   "fieldtype": "Small Text",
+   "label": "Q: Did you have a clear understanding of your required work?"
+  },
+  {
+   "fieldname": "data_17",
+   "fieldtype": "Small Text",
+   "label": "Q: Did you feel adequately trained and equipped to perform your job?"
+  },
+  {
+   "fieldname": "data_18",
+   "fieldtype": "Small Text",
+   "label": "Q:Were there opportunities for professional development that you feel were lacking?"
+  },
+  {
+   "fieldname": "6_feedback_and_recognition_section",
+   "fieldtype": "Section Break",
+   "label": "6. Feedback and Recognition"
+  },
+  {
+   "fieldname": "data_19",
+   "fieldtype": "Small Text",
+   "label": "Q:  Did you receive regular feedback on your performance?"
+  },
+  {
+   "fieldname": "data_20",
+   "fieldtype": "Small Text",
+   "label": "Q:Were there opportunities for recognition or feedback that you feel were missed?"
+  },
+  {
+   "fieldname": "data_21",
+   "fieldtype": "Section Break",
+   "label": "7. Company Policies and Procedures"
+  },
+  {
+   "fieldname": "data_22",
+   "fieldtype": "Small Text",
+   "label": "Q: Were company policies and procedures clear and well-communicated?"
+  },
+  {
+   "fieldname": "data_23",
+   "fieldtype": "Small Text",
+   "label": "Q:Were there any policies or procedures that you found particularly challenging or ineffective?"
+  },
+  {
+   "fieldname": "data_24",
+   "fieldtype": "Section Break",
+   "label": "8. Overall Experience"
+  },
+  {
+   "fieldname": "data_25",
+   "fieldtype": "Small Text",
+   "label": "Q:How would you summarize your overall experience working for the company?"
+  },
+  {
+   "fieldname": "data_26",
+   "fieldtype": "Small Text",
+   "label": "Q: Is there anything else you would like to share with us ( Any Positive / Negative/ Challenges / Work related conflicts)"
+  },
+  {
+   "fieldname": "section_brk",
+   "fieldtype": "Section Break",
+   "label": "Interview conducted by:"
+  },
+  {
+   "fieldname": "data_27",
+   "fieldtype": "Link",
+   "label": "Employee:",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "data_27.employee_name",
+   "fieldname": "data_28",
+   "fieldtype": "Data",
+   "label": "Name:"
+  },
+  {
+   "fieldname": "data_29",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Signature:"
+  },
+  {
+   "fieldname": "data_30",
+   "fieldtype": "Data",
+   "label": "Date:"
+  },
+  {
+   "fieldname": "data_31",
+   "fieldtype": "Column Break",
+   "label": "Reviewed by:"
+  },
+  {
+   "fieldname": "data_32",
+   "fieldtype": "Data",
+   "label": "Employee:"
+  },
+  {
+   "fieldname": "data_33",
+   "fieldtype": "Data",
+   "label": "Name: "
+  },
+  {
+   "fieldname": "data_34",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Signature:"
+  },
+  {
+   "fieldname": "section_break_42",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "data_35",
+   "fieldtype": "Data",
+   "label": "Remarks: "
+  },
+  {
+   "fieldname": "data_36",
+   "fieldtype": "Data",
+   "label": "Reason for leaving: "
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-10 18:32:13.139223",
+ "modified_by": "Administrator",
+ "module": "KBL",
+ "name": "Exit Interview",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

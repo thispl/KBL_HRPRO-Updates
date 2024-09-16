@@ -1,0 +1,164 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "PIP-.####",
+ "creation": "2024-05-08 12:40:31.095167",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "branch",
+  "branch_manager_mail_id",
+  "column_break_3",
+  "department",
+  "designation",
+  "company",
+  "cc1",
+  "cc2",
+  "cc3",
+  "section_break_8",
+  "last_date_to_achieve_target",
+  "month",
+  "column_break_10",
+  "minimum_score",
+  "column_break_13",
+  "achieved_points"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Date",
+   "label": "Month"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "achieved_points",
+   "fieldtype": "Data",
+   "label": "Achieved Points",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.branch",
+   "fieldname": "branch",
+   "fieldtype": "Data",
+   "label": "Branch",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.branch_mail_id",
+   "fieldname": "branch_manager_mail_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Branch Manager Mail ID"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "minimum_score",
+   "fieldtype": "Select",
+   "label": "Minimum Score",
+   "options": "\n50\n75",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_date_to_achieve_target",
+   "fieldtype": "Date",
+   "label": "Last Date to Achieve Target",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cc1",
+   "fieldtype": "Data",
+   "label": "CC1"
+  },
+  {
+   "fieldname": "cc2",
+   "fieldtype": "Data",
+   "label": "CC2"
+  },
+  {
+   "fieldname": "cc3",
+   "fieldtype": "Data",
+   "label": "CC3"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-11 14:25:04.640003",
+ "modified_by": "Administrator",
+ "module": "KBL",
+ "name": "Performance Improvement Plan",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

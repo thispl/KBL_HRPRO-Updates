@@ -1,0 +1,23 @@
+{
+ "content": null,
+ "creation": "2021-12-31 10:59:32.982868",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2021-12-31 10:59:52.992928",
+ "modified_by": "Administrator",
+ "module": "KBL",
+ "name": "code-of-conduct",
+ "owner": "Administrator",
+ "page_name": "Code of Conduct",
+ "roles": [
+  {
+   "role": "Employee"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "Code of Conduct"
+}

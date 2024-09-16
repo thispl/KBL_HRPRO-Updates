@@ -1,0 +1,26 @@
+<p>
+	{{_("Hello")}} {{ first_name }}{% if last_name %} {{ last_name}}{% endif %},
+</p>
+<p>Welcome Onboard!!!</p>
+{% set site_link = "<a href='" + site_url + "'>" + site_url + "</a>" %}
+{% set empid = frappe.db.get_value("User",user,'username')%}
+<p>{{_("A new account has been created for HRMS & CRM at {0}").format(site_link)}}.</p>
+<p>{{_("Your login id is")}}: <b>{{ user }}</b> or <b>Employee ID : {{ empid }} </b></p>
+<p>{{_("Please Click on the below link to complete your registration and set a new password")}}.</p>
+
+<p style="margin: 15px 0px;">
+	<a href="{{ link }}" rel="nofollow" class="btn btn-primary">{{ _("Complete Registration") }}</a>
+</p>
+
+{% if created_by != "Administrator" %}
+<br>
+<p style="margin-top: 15px">
+	{{_("Thanks")}},<br>
+	{{ created_by }}
+</p>
+{% endif %}
+<br>
+<p>
+	{{_("You can also copy-paste following link in your browser to complete the registration.")}}<br>
+	<a href="{{ link }}">{{ link }}</a>
+</p>

@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "creation": "2021-09-02 12:19:33.277475",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "course",
+  "specialization",
+  "board_university",
+  "date_of_complection"
+ ],
+ "fields": [
+  {
+   "fieldname": "course",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Course",
+   "options": "Name"
+  },
+  {
+   "fieldname": "specialization",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Specialization",
+   "options": "Name"
+  },
+  {
+   "fieldname": "board_university",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Board / University",
+   "options": "Name"
+  },
+  {
+   "fieldname": "date_of_complection",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Completion"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-09-24 11:47:32.289354",
+ "modified_by": "Administrator",
+ "module": "KBL",
+ "name": "Pursuing Education",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

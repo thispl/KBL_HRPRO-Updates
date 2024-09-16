@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "creation": "2024-04-22 15:07:36.558604",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "education",
+  "name_of_institution",
+  "university",
+  "class",
+  "year_of_passing"
+ ],
+ "fields": [
+  {
+   "fieldname": "education",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Education"
+  },
+  {
+   "fieldname": "name_of_institution",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name of Institution"
+  },
+  {
+   "fieldname": "university",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "University"
+  },
+  {
+   "fieldname": "class",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Class "
+  },
+  {
+   "fieldname": "year_of_passing",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Year of Passing"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-04-22 15:07:36.558604",
+ "modified_by": "Administrator",
+ "module": "KBL",
+ "name": "Computer Education",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

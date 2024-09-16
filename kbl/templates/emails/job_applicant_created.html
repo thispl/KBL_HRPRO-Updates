@@ -1,0 +1,13 @@
+<p>{{_("Dear")}} {{ full_name }}{% if last_name %} {{ last_name}}{% endif %},</p>
+<p>{{_("A new Account has been created for you with KBL Services")}}.</p>
+<p>{{_("Click on the link to complete your Job Application")}}.</p>
+<br>
+<p>"Username": {{ email_id }}</p>
+<p>"Password": {{ password }}</p>
+
+<p style="margin: 30px 0px;">
+	<a href="{{ site_url }}login" rel="nofollow" style="padding: 8px 20px; background-color: #7575ff; color: #fff; border-radius: 4px; text-decoration: none; line-height: 1; border-bottom: 3px solid rgba(0, 0, 0, 0.2); font-size: 14px; font-weight: 200;">{{ _("Complete Application") }}</a>
+</p>
+
+<br>
+<p style="font-size: 85%;">{{_("You can also copy-paste this link in your browser")}} <a href="{{ site_url }}login">{{ site_url }}</a></p>

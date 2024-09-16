@@ -1,0 +1,23 @@
+{
+ "aggregate_function_based_on": "",
+ "creation": "2023-11-21 14:23:28.132274",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Visit Report",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Visit Report\",\"creation\",\"Timespan\",\"this week\",false]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Number of Visit(Weekly)",
+ "modified": "2023-11-21 14:28:42.088811",
+ "modified_by": "Administrator",
+ "module": "KBL",
+ "name": "Number of Visit(Weekly)",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Document Type"
+}

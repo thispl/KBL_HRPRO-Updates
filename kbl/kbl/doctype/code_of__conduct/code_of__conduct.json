@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "creation": "2024-03-21 12:01:31.468568",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "code_of_conduct",
+  "view"
+ ],
+ "fields": [
+  {
+   "fieldname": "code_of_conduct",
+   "fieldtype": "Attach",
+   "label": "Code of Conduct"
+  },
+  {
+   "fieldname": "view",
+   "fieldtype": "HTML"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-03-25 14:40:40.332553",
+ "modified_by": "Administrator",
+ "module": "KBL",
+ "name": "Code of  Conduct",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

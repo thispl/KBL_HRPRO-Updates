@@ -1,0 +1,199 @@
+{
+ "actions": [],
+ "autoname": "KSL/P/784/.######",
+ "creation": "2024-04-13 11:45:51.939094",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "dob",
+  "user_id",
+  "warning",
+  "issue_type",
+  "column_break_4",
+  "posting_date",
+  "occurrence_count",
+  "designation",
+  "father_name",
+  "pincode",
+  "address",
+  "section_break_12",
+  "report_to",
+  "department_head",
+  "column_break_15",
+  "ksl_head",
+  "mail_content_section",
+  "mail_content",
+  "check",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.date_of_joining",
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "Date of Joining",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.fathers_name",
+   "fieldname": "father_name",
+   "fieldtype": "Data",
+   "label": "Father's Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Address"
+  },
+  {
+   "fetch_from": "employee.user_id",
+   "fieldname": "user_id",
+   "fieldtype": "Data",
+   "label": "User Id",
+   "read_only": 1
+  },
+  {
+   "fieldname": "warning",
+   "fieldtype": "Data",
+   "label": "Total Warning Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mail_content_section",
+   "fieldtype": "Section Break",
+   "label": "Mail Content"
+  },
+  {
+   "fetch_from": "issue_type.description",
+   "fetch_if_empty": 1,
+   "fieldname": "mail_content",
+   "fieldtype": "Small Text",
+   "label": "Mail Content"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fetch_from": "employee.pin_code",
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Pincode"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "employee.reports_to",
+   "fieldname": "report_to",
+   "fieldtype": "Link",
+   "label": "Report To",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "report_to.user_id",
+   "fieldname": "department_head",
+   "fieldtype": "Data",
+   "label": "Department Head"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ksl_head",
+   "fieldtype": "Link",
+   "label": "KSL Head",
+   "options": "User"
+  },
+  {
+   "default": "0",
+   "fieldname": "check",
+   "fieldtype": "Check",
+   "label": "Check",
+   "read_only": 1
+  },
+  {
+   "fieldname": "issue_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Issue Type",
+   "options": "Issue Type"
+  },
+  {
+   "fieldname": "occurrence_count",
+   "fieldtype": "Int",
+   "label": "Total Issue Count"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Warning Letter",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-09-16 14:16:22.012945",
+ "modified_by": "Administrator",
+ "module": "KBL",
+ "name": "Warning Letter",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "creation": "2024-04-15 17:43:43.093128",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "designation",
+  "region",
+  "send_mail",
+  "template",
+  "mail_content",
+  "employee",
+  "email"
+ ],
+ "fields": [
+  {
+   "fieldname": "designation",
+   "fieldtype": "Table MultiSelect",
+   "label": "Designation",
+   "options": "Designation Multiselect"
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Table MultiSelect",
+   "label": "Region",
+   "options": "Region Multiselect"
+  },
+  {
+   "fieldname": "send_mail",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Send Mail"
+  },
+  {
+   "fieldname": "template",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Additional Template",
+   "options": "Additional Template",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "template.mail_content",
+   "fieldname": "mail_content",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Additional Template Content",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Employee List"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Email ",
+   "options": "Employee Mail"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-05-22 14:10:51.734183",
+ "modified_by": "Administrator",
+ "module": "KBL",
+ "name": "Email Communication",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
